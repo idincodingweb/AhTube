@@ -11,7 +11,7 @@ function HomePage() {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=trending&type=video&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=trending&type=video&key=${import.meta.env.VITE_KEY}`
         );
         setVideos(response.data.items);
       } catch (error) {
