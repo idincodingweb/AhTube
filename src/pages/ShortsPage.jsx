@@ -10,7 +10,7 @@ function ShortsPage() {
     const fetchShorts = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=shorts&type=video&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=shorts&type=video&key=${import.meta.env.VITE_KEY}`
         );
         console.log(response.data); // Tambahkan log ini
         setShorts(response.data.items);
