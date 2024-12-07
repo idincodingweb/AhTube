@@ -13,7 +13,7 @@ function VideoDetail() {
     const fetchVideo = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${id}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${id}&key=${import.meta.env.VITE_KEY}`
         );
         setVideo(response.data.items[0]);
       } catch (error) {
